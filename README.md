@@ -1,23 +1,22 @@
 # url-shortner
 
 ### Introduction
-Project Support is an open source platform that enable users share causes they're passionate about and actively involved with with the hopes of connecting with other users equally interested in working with them on the given cause.
+The url shortner is an API that enables users to shorten unnecessarily long urls to shorter and more manageable urls
 
-### Project Support Features
-* Users can signup and login to their accounts
-* Public (non-authenticated) users can access all causes on the platform
-* Authenticated users can access all causes as well as create a new cause, edit their created cause and also delete what they've created.
+### Project Features
+* Users can shorten their urls
+* Users can get a list of all long and short urls stored
+* Users can delete stored urls 
 
 ### Installation Guide
 * Clone this repository [here](https://github.com/blackdevelopa/ProjectSupport.git).
-* The develop branch is the most stable branch at any given time, ensure you're working from it.
-* Run npm install to install all dependencies
-* You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
-* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+* Run npm install to install all dependencies. Ensure you have node and npm installed.
+*  Ensure you have mongodb installed and running locally on your computer or you could use atlas
+* Create an .env file in your project root folder and add your variables. Ensure you add your database connection string. See .env.sample for assistance.
 
 ### Usage
-* Run npm start:dev to start the application.
-* Connect to the API using Postman on port 7066.
+* Run npm start to start the application.
+* Connect to the API using Postman on port 8080.
 
 ### API Endpoints
 | HTTP Verbs | Endpoints | Action |
