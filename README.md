@@ -1,7 +1,7 @@
 # url-shortner
 
 ### Introduction
-The url shortner is an API that enables users to shorten unnecessarily long urls to shorter and more manageable urls
+The url shortner is an API that enables users to shorten unnecessarily long urls to shorter and more manageable urls.
 
 ### Project Features
 * Users can shorten their urls
