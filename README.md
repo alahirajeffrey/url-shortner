@@ -22,7 +22,7 @@ The url shortner is an API that enables users to shorten unnecessarily long urls
 | --- | --- | --- | --- |
 | POST | /api/url/shorten | To shorten a url | req.body.longUrl |
 | GET | /api/url/getAll | To retrieve all urls | |
-| GET | /api/url/:id | redirect to long url using id | req.params.shortUrl |
+| GET | /api/url/getOne | redirect to long url using id | req.body.id |
 
 ### Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
