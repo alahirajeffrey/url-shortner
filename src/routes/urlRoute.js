@@ -31,7 +31,7 @@ router.post('/shorten', async (req, res) => {
                         shortUrl: shortUrl
                     })
                     const savedUrl = newUrl.save()
-                    return res.status(200).send(savedUrl.shortUrl)
+                    return res.status(200).send(shortUrl)
                 });
             }
         } catch (err) {
@@ -55,15 +55,19 @@ router.get('/getAll', async (req, res) => {
     }
 })
 
-//@route GET/api/url/:id
+
+// @route GET/api/url/:id
 //@desc redirect to long url
-router.get('/:id', async (req, res) => {
+router.get('/getOne', async (req, res) => {
+
+    //validate request
+    if (!req.body.id) return res.status(400).send({ message: "Id required" })
 
     try {
         //check if short url exists
-        const url = await Url.findOne({ _id: req.params.id })
+        const url = await Url.findOne({ _id: req.body.id })
 
-        if (!url) return res.status(400).send({ message: "Short url does not exist" })
+        if (!url) return res.status(400).send({ message: "Url not found" })
 
         if (url) return res.redirect(url.longUrl)
 
